@@ -1,0 +1,809 @@
+﻿/*general css*/
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url(images/anas-alshanti-feXpdV001o4-unsplash.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+
+.container {
+  padding: 10px 10%;
+}
+
+.section-title {
+  font-size: 60px;
+  font-weight: normal;
+  color: white;
+}
+
+/*header css*/
+#header {
+  width: 100%;
+  height: 100vh;
+}
+
+/*job roles marquee*/
+.marquee {
+  --gap: 1rem;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+}
+
+.marquee-content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: var(--gap);
+  animation: scroll 20s linear infinite;
+  list-style: none;
+}
+
+/*robotics engr*/
+.title-one {
+  color: #ff6ff2;
+}
+
+/*mech engr*/
+.title-two {
+  color: #A844FF;
+}
+
+/*ml engr*/
+.title-tre {
+  color: #DCAAFF;
+}
+
+/*data analyst*/
+.title-fou {
+  color: #00AAFF;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+/*navbar*/
+nav {
+  background: rgba(0, 0, 0, 0.7);
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  padding: 10px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  transition: all 0.4s ease-in-out;
+}
+
+/*make navbar background transparent at top of webpage*/
+nav.at-top {
+  background: rgba(0, 0, 0, 0);
+}
+
+.logo {
+  width: 60px;
+}
+
+/*navbar items*/
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+/*navbar item links*/
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition-duration: 0.4s;
+}
+/*navbar item link hover color*/
+  nav ul li a:hover {
+    color: #ff6ff2;
+  }
+
+/*navbar menu (invisible on big screens)*/
+nav .menu {
+  display: none;
+}
+
+/*div for header content*/
+.header-text {
+  margin-top: 20%;
+  font-size: 30px;
+}
+
+/*header title*/
+.header-text h1 {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+/*about body css*/
+#about {
+  background: #2D0037;
+  padding: 60px 0;
+  color: #ababab;
+}
+
+/*about content (image and description)*/
+.about-desc {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/*about image container*/
+.about-img {
+  flex-basis: 20%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+  /*the actual image*/
+  .about-img img {
+    width: 100%;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    filter: brightness(0.8);
+  }
+
+  /*brightens on hover*/
+  .about-img img:hover {
+    filter: brightness(1);
+  }
+
+/*about description*/
+.about-text {
+  flex-basis: 70%;
+}
+
+/*tabs for skills-experience-education section*/
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+  justify-content: center;
+}
+
+/*colors for tabs*/
+.tab-links {
+  margin: 0 25px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition-duration: 0.4s;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+@media (hover: hover) {
+  /*hover colors*/
+  .tab-links:hover {
+    color: #ff6ff2
+  }
+}
+
+  /*colors for active link*/
+  .tab-links.active-link {
+    background: #6400C1;
+    color: white;
+  }
+
+  /*background for entries in skills tab*/
+  .tab-entry {
+    background: #1F0026;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 10px;
+  }
+
+    /*lists of skills, points, etc*/
+    .tab-entry ul li {
+      list-style: square;
+      list-style-position: inside;
+    }
+
+  /*display in skills tab (flex so that they're in one line)*/
+.skills-tab {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin: 50px 0;
+}
+
+  /*lists of skills*/
+  .skill-category ul li {
+    list-style: square;
+    list-style-position: inside;
+  }
+
+  /*heading in skills*/
+  .skill-category h3 {
+    color: #DCAAFF;
+    padding-bottom: 7px;
+  }
+
+  /*position name*/
+  .exp-entry h2 {
+    color: #DCAAFF;
+  }
+
+  /*company name*/
+  .exp-entry h3 {
+    color: white;
+  }
+
+  /*date and location*/
+  .exp-entry h4 {
+    color: #E0D0E0;
+  }
+
+  /*background and font color for ASU education item*/
+  #asu-ras-mae {
+    background: #200003;
+    color: #ABABAB;
+  }
+
+    /*ASU heading color (gold)*/
+    #asu-ras-mae h2 {
+      color: #FFC627;
+    }
+
+    /*ASU degree name*/
+    #asu-ras-mae h3, h4 {
+      color: white;
+    }
+
+  /*background and font color for DBIT education item*/
+  #dbit-mech {
+    background: #000626;
+    color: #ABABAB;
+  }
+
+    /*DBIT heading color (light blue)*/
+    #dbit-mech h2 {
+      color: #80CFFF;
+    }
+
+    /*DBIT degree name*/
+    #dbit-mech h3, h4 {
+      color: white;
+    }
+
+  /*major font color*/
+  .major {
+    color: #ABABAB;
+  }
+
+.cert-entry h2 {
+  color: #00AAFF;
+}
+
+.cert-entry h4 {
+  color: #a0c9F0;
+}
+
+.cert-link {
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  transition-duration: 0.4s;
+}
+
+@media (hover: hover) {
+  .cert-link:hover {
+    color: #00AAFF;
+  }
+}
+
+  /*getting the tabs to not display when the corresponding button is not clicked*/
+  .tab-contents {
+    display: none;
+  }
+
+    /*displaying the active tab, block when it's education or experience...*/
+    .tab-contents.active-tab.edu-tab, .tab-contents.active-tab.exp-tab {
+      display: block;
+    }
+
+    /*and flex when it's the skills*/
+    .tab-contents.active-tab.skills-tab {
+      display: grid;
+    }
+
+  /*projects section css*/
+
+  /*container for the list of work items*/
+  .work-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    margin: 50px 0;
+  }
+
+  /*container for work entry*/
+  .work-entry {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+.work-entry img{
+  object-fit: fill;
+}
+
+  @media (hover: hover) {
+    /*make the image brighter on mouse-over*/
+    .work-entry:hover img {
+      filter: brightness(1);
+    }
+  }
+
+  /*image parameters*/
+  .work-entry img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition-duration: 0.4s;
+    filter: brightness(0.8);
+  }
+
+  /*layer with the gradient on which title and description are written*/
+  .layer {
+    box-sizing: border-box;
+    padding: 10px 20px;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #1F0026);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    transition-duration: 0.4s;
+  }
+
+    /*title of project*/
+    .layer h3 {
+      color: #DCAAFF;
+      margin-bottom: 5px;
+    }
+
+    /*description of project, invisible*/
+    .layer p {
+      opacity: 0;
+      transition-duration: 0.4s;
+    }
+
+.project-link {
+  font-weight: bold;
+  text-decoration: none;
+  color: #E0D0E0;
+  transition-duration: 0.4s;
+}
+
+  @media (hover: hover) {
+    .project-link:hover {
+      color: #ff6ff2;
+    }
+  }
+
+    /*same layer as earlier, except its height is more now, space for desc*/
+    .layer.show-description {
+      box-sizing: border-box;
+      width: 100%;
+      height: 45%;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), #1F0026);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      overflow: hidden;
+    }
+
+      /*description of project, now visible*/
+      .layer.show-description p {
+        opacity: 100%;
+      }
+
+  .work-entry.coming-soon {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+  }
+
+    /*image parameters*/
+    .work-entry.coming-soon img {
+      -webkit-filter: grayscale(1);
+      filter: grayscale(1) blur(5px) brightness(0.2);
+    }
+
+  .layer.coming-soon {
+    box-sizing: border-box;
+    padding: 10px 20px;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #222);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+
+    /*title of project*/
+    .layer.coming-soon h3 {
+      color: #AAAAAA;
+      margin-bottom: 5px;
+    }
+
+  /*contact info container*/
+  #contact {
+    background: #1C0026;
+  }
+
+  .contact-display {
+    display: flex;
+  }
+
+  .contact-info {
+    flex-basis: 35%;
+  }
+
+    .contact-info p {
+      margin: 10px 0;
+    }
+
+      .contact-info p i {
+        margin: 10px;
+        color: #7730db;
+      }
+
+  .social-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition-duration: 0.4s;
+    margin: 10px;
+    display: inline-block;
+  }
+
+  @media (hover: hover) {
+    .social-link:hover {
+      color: #ff6ff2;
+    }
+  }
+
+  .contact-btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    background: #6400C1;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    margin: 15px 0;
+  }
+
+  @media (hover: hover) {
+    .contact-btn:hover {
+      background: #dd4dd0;
+    }
+  }
+
+  .user-input-section {
+    flex-basis: 60%;
+  }
+
+    .user-input-section form {
+      width: 100%;
+    }
+
+      .user-input-section form input, textarea {
+        width: 100%;
+        border: none;
+        outline: none;
+        background: #0A0004;
+        padding: 15px;
+        margin: 10px 0;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+      }
+
+  .form-submission-toast {
+    padding: 10px 0;
+    transition-duration: 0.4s;
+    opacity: 0%;
+  }
+
+.visible-toast {
+  color: #ff6ff2;
+  opacity: 100%;
+}
+
+  .copyright {
+    text-align: right;
+    margin: 25px 0;
+  }
+
+    .copyright a {
+      text-decoration: none;
+      color: white;
+      transition-duration: 0.4s;
+    }
+
+  @media (hover: hover) {
+    .copyright a:hover {
+      color: #ff6ff2;
+    }
+  }
+
+  /* small screen */
+
+  @media only screen and (max-width: 600px) {
+
+    .section-title {
+      font-size: 40px;
+      font-weight: normal;
+      color: white;
+    }
+
+    #header {
+      height: 65vh;
+    }
+
+    .header-text {
+      margin-top: 40%;
+    }
+
+      .header-text h1 {
+        font-size: 40px;
+        font-weight: 600;
+      }
+
+    .title-one, .title-two, .title-tre, .title-fou {
+      font-size: 20px;
+    }
+
+    nav .menu {
+      display: block;
+    }
+
+    nav ul {
+      background: #6400B1;
+      position: fixed;
+      top: 0;
+      right: -200px;
+      width: 200px;
+      height: 100vh;
+      padding-top: 50px;
+      transition-duration: 0.4s;
+    }
+
+      nav ul li {
+        display: block;
+        margin: 25px;
+      }
+
+      nav ul .menu {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+      }
+
+    #about, #projects {
+      font-size: 14px;
+    }
+
+    .about-desc {
+      display: block;
+    }
+
+      .about-img img {
+        max-width: 200px;
+        justify-content: center;
+      }
+
+    .tab-titles {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-tab {
+      display: block;
+    }
+
+    .exp-entry h2 {
+      font-size: 1.17em;
+    }
+
+    .tab-contents {
+      display: none;
+    }
+
+      .tab-contents.active-tab.skills-tab {
+        display: block;
+      }
+
+    .skill-category ul {
+      columns: 2;
+    }
+
+    .work-list {
+      display: block;
+    }
+
+    .work-entry {
+      margin: 40px 0;
+    }
+
+    .tab-links {
+      margin: 4px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      position: relative;
+      transition-duration: 0.4s;
+      text-align: center;
+      padding: 7px 14px;
+      border-radius: 5px;
+    }
+
+    .layer.show-description {
+      height: 60%;
+    }
+
+    #contact {
+      font-size: 14px;
+    }
+
+    .contact-display {
+      display: block;
+    }
+
+    .user-input-section form input, textarea {
+      color: white;
+      font-size: 14px;
+      border-radius: 5px;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  /* medium screen (ipad) */
+
+  @media only screen and (max-width: 1080px) and (min-width: 601px) {
+    #header {
+      height: 65vh;
+    }
+
+    .header-text h1 {
+      font-size: 40px;
+      font-weight: 600;
+    }
+
+    .title-one, .title-two, .title-tre, .title-fou {
+      font-size: 25px;
+    }
+
+    .section-title {
+      font-size: 45px;
+      font-weight: 600;
+    }
+
+    .skills-tab {
+      display: block;
+    }
+
+    .exp-entry h2 {
+      font-size: 1.17em;
+    }
+
+    #about, #projects {
+      font-size: 15px;
+    }
+
+    .tab-titles {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tab-contents {
+      display: none;
+    }
+
+      .tab-contents.active-tab.skills-tab {
+        display: block;
+      }
+
+    .tab-links {
+      margin: 5px;
+      padding: 10px 20px;
+    }
+
+    .skill-category ul {
+      columns: 3;
+    }
+
+    .layer.show-description {
+      height: 75%;
+    }
+
+    .work-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 40px;
+      margin: 50px 0;
+    }
+
+    #contact {
+      font-size: 14px;
+    }
+
+    .contact-display {
+      display: block;
+    }
+
+    .user-input-section form input, textarea {
+      color: white;
+      font-size: 14px;
+      border-radius: 5px;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  @media (hover: none) {
+    .layer a {
+      color: #ff6ff2;
+    }
+
+    .copyright a {
+      text-decoration: none;
+      color: #ff6ff2;
+    }
+
+    .about-img img {
+      filter: brightness(1);
+    }
+
+    .work-entry img {
+      filter: brightness(1);
+    }
+  }
+
+@media (pointer:coarse) {
+  .tab-links {
+    background: #1F0026;
+    color: #ff6ff2;
+  }
+}
