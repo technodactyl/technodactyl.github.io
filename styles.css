@@ -754,6 +754,10 @@ nav .menu {
       columns: 3;
     }
 
+    .layer {
+      height: 40%;
+    }
+
     .layer.show-description {
       height: 75%;
     }
